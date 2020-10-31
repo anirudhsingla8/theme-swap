@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Title</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
+
         .day{
             background-color: white;
             color: black;
@@ -14,32 +14,33 @@
             color: gold;
         }
         .button_night{
-            background-color: white;
-            color: black;
+            background-color: darkblue;
+            color: white;
         }
         .button_day{
             background-color: white;
             color: black;
         }
+
     </style>
 </head>
-    <body id="body" class='night'>
-        <div id="text" >
-            <p>
-                I am Newton School Student, ready to become the full stack Developer
-            </p>
-        </div>
-        <button onclick=swap() id="swap" value="swap theme" class="button_night">
-            swap theme
-        </button>
+    <body>
+         <div id = "app" class="day">
+             <p>
+                 I am a Newton School student, ready to become an awesome full stack developer
+             </p>
+             <button onclick="swapTheme()" id="swap" class="button_day">
+                 swap theme
+             </button>
+         </div>
     </body>
     <script>
-        function swap(){
-            if(document.getElementById('body').className == 'night'){
-                document.getElementById('body').className = 'day'
+        function swapTheme(){
+            if(document.getElementById('app').className == 'night'){
+                document.getElementById('app').className = 'day'
                 document.getElementById('swap').className = 'button_day'
-            }else if(document.getElementById('body').className == 'day'){
-                document.getElementById('body').className = 'night'
+            }else if(document.getElementById('app').className == 'day'){
+                document.getElementById('app').className = 'night'
                 document.getElementById('swap').className = 'button_night'
             }
         }
