@@ -18,7 +18,7 @@ describe('Local', () => {
 
 
 describe('Local', () => {
-    it('theme swap', () => {
+    it('checking div id,class', () => {
         cy.get('div').should('have.id','app')
         cy.get('div').should('have.class','day')
     })
@@ -26,7 +26,7 @@ describe('Local', () => {
 
 
 describe('Local', () => {
-    it('theme swap', () => {
+    it('checking button id,class', () => {
         cy.get('button').should('have.id','swap')
         cy.get('button').should('have.class','button_day')
     })
@@ -35,7 +35,7 @@ describe('Local', () => {
 
 
 describe('Local', () => {
-    it('theme swap', () => {
+    it('checking swap theme', () => {
         cy.get('button').click().then(()=>{
             cy.get('#app').should('have.class','night')
             cy.get('#swap').should('have.class','button_night')
@@ -45,7 +45,7 @@ describe('Local', () => {
 
 
 describe('Local', () => {
-    it('theme swap', () => {
+    it('checking swap theme', () => {
         cy.get('button').click().then(()=>{
             cy.get('#app').should('have.class','day')
             cy.get('#swap').should('have.class','button_day')
