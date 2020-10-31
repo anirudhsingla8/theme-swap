@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .day{
+            background-color: white;
+            color: black;
+        }
+        .night{
+            background-color: black;
+            color: gold;
+        }
+        .button_night{
+            background-color: white;
+            color: black;
+        }
+        .button_day{
+            background-color: white;
+            color: white;
+        }
+    </style>
+</head>
+    <body id="body" class='night'>
+        <div id="text" >
+            <p>
+                I am Newton School Student, ready to become the full stack Developer
+            </p>
+        </div>
+        <button onclick=swap() id="swap" value="swap theme" class="button_night">
+            swap theme
+        </button>
+    </body>
+    <script>
+        function swap(){
+            if(document.getElementById('body').className == 'night'){
+                document.getElementById('body').className = 'day'
+                document.getElementById('swap').className = 'button_day'
+            }else if(document.getElementById('body').className == 'day'){
+                document.getElementById('body').className = 'night'
+                document.getElementById('swap').className = 'button_night'
+            }
+        }
+    </script>
+</html>
